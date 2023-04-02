@@ -52,7 +52,6 @@ for launch in itertools.islice(data, 0, 50):
     ))
 conn.commit()
 
-
 # Seleccionar todos los datos de la tabla
 cur.execute("SELECT * FROM spacex_launches")
 rows = cur.fetchall()
