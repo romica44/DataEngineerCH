@@ -15,4 +15,4 @@ Para ver el entregable, haga clic [aquí](https://github.com/romica44/DataEngine
 
 
 
-2023 [Romina Cattaneo](https://www.linkedin.com/in/romina-paola-cattaneo-9757b345/)[![icono de LinkedIn](https://cdn-icons-png.flaticon.com/512/61/61109.png){width=50px height=50px}]
+2023 by [Romina Cattaneo](https://www.linkedin.com/in/romina-paola-cattaneo-9757b345/)
