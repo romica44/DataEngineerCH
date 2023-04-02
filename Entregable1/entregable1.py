@@ -1,7 +1,12 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 import psycopg2
 import itertools
+
+# Cargar variables de entorno desde el archivo .env
+load_dotenv()
 
 # Hacer solicitud a la API y cargar los datos en un diccionario de Python
 response = requests.get('https://api.spacexdata.com/v3/launches')
@@ -9,11 +14,11 @@ data = json.loads(response.text)
 
 # Conectar con la base de datos de Redshift
 conn = psycopg2.connect(
-    host = 'data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com',
-    port = '5439',
-    user = 'romica44_coderhouse',
-    password = 'tJA6s0E8l2Cg',
-    database = 'data-engineer-database'
+    host=os.environ['REDSHIFT_HOST'],
+    port=os.environ['REDSHIFT_PORT'],
+    user=os.environ['REDSHIFT_USER'],
+    password=os.environ['REDSHIFT_PASSWORD'],
+    database=os.environ['REDSHIFT_DATABASE']
 )
 
 #Crear cursor y tabla
@@ -28,7 +33,7 @@ cur.execute("""
         details TEXT
     );
 """)
-# conn.commit()
+conn.commit()
 
 #Insertar los datos en la tabla
 for launch in itertools.islice(data, 0, 50):
