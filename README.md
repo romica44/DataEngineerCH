@@ -7,7 +7,7 @@ Breve descripción: Esta API proporciona información sobre los lanzamientos de 
 
 ## Tecnologías utilizadas
 - Python ![python](https://img.icons8.com/color/48/000000/python.png)
-- Amazon Redshift ![redshift](https://img.icons8.com/color/48/000000/amazon-redshift.png)
+- Amazon Redshift ![redshift]([https://img.icons8.com/color/48/000000/amazon-redshift.png](https://icons8.com/icon/119085/amazon-redshift))
 
 ## Entregable 1
 Para ver el entregable, haga clic [aquí](https://github.com/romica44/DataEngineerCH/blob/main/Entregable1/entregable1.py).
