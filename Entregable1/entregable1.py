@@ -25,12 +25,13 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 cur.execute("""
     CREATE TABLE IF NOT EXISTS spacex_launches (
-        flight_number INT,
+        flight_number INT UNIQUE, 
         mission_name VARCHAR(2000),
         launch_date_utc TIMESTAMP,
         rocket_name VARCHAR(2000),
         launch_site_name VARCHAR(2000),
-        details TEXT
+        details TEXT,
+        PRIMARY KEY (flight_number)
     );
 """)
 conn.commit()
